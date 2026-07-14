@@ -83,7 +83,7 @@ bash download_dataset.sh
 ```
 preprocess data：
 ```bash
-bash convert_to_fast_datas.py
+bash convert_to_fast_data.py
 ```
 
 
