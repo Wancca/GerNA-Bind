@@ -1,7 +1,6 @@
 <!--# GerNA-Cert >
 
 
-<!-- 🔗 Read our paper: [ArXiv](https://arxiv.org/abs/****.*****) -->
 
 ## Overview
 
@@ -25,7 +24,6 @@
   - [RNA Small Molecule Screening](#rna-small-molecule-screening)
   - [RNA Target Binding Site Prediction](#rna-target-binding-site-prediction)
 <!-- - [Citation](#citation) -->
-- [Acknowledgements](#acknowledgements)
 
 ## Installation
 ### If you prefer a faster setup, you can use the provided gernabind.yaml file:
@@ -132,16 +130,6 @@ python inference_binding_site.py
 ## License
 No Commercial use of either the model nor generated data, details to be found in license.md.
 
-<!-- ## Citation
-🤗 If you find our code useful or our work relevant, please consider citing:
-
-```
-@article{gerna2025,
-  title={GerNA-Bind: Geometric-informed RNA-ligand Binding Specificity Prediction with Deep Learning},
-  author={Yunpeng Xia, Jiayi Li, Jiahua Rao, Dong-Jun Yu, Xiucai Chen and Shuangjia Zheng},
-  journal={Nature Machine Intelligence},
-  year={2025}
-}
 ``` -->
 
 ## Acknowledgements
