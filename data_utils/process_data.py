@@ -224,10 +224,12 @@ def main():
     parser = argparse.ArgumentParser(description='Process RNA and mol files')
     parser.add_argument('--fasta', type=str, required=True, help='Path to the RNA fasta file')
     parser.add_argument('--smiles', type=str, required=True, help='Path to the mol txt file')
-    parser.add_argument('--RhoFold_path', type=str, default="/xcfhome/ypxia/github/RhoFold", required=False)
-    parser.add_argument('--RhoFold_weight', type=str, default="/xcfhome/ypxia/github/RhoFold/pretrained/RhoFold_pretrained.pt", required=False)
+    parser.add_argument('--RhoFold_path', type=str, default="D:\RhoFold_project", required=False)
+    parser.add_argument('--RhoFold_weight', type=str, default="D:\RhoFold_project\pretrained\RhoFold_pretrained.pt", required=False)
     args = parser.parse_args()
 
+    print(f"DEBUG: RhoFold_path is: {args.RhoFold_path}")  # 添加这行
+    print(f"DEBUG: RhoFold_weight is: {args.RhoFold_weight}")  # 添加这行
     rna_records = process_fasta(args.fasta)
     smile_list = process_smiles(args.smiles)
 
@@ -263,6 +265,7 @@ def main():
                 "--output_dir", seq_output_dir,
                 "--ckpt", args.RhoFold_weight
             ]
+            print(f"DEBUG: Final command list being passed to subprocess: {command}")  # <-- 添加这行
             subprocess.run(command, check=True, capture_output=True, text=True)
 
             pdb_file_path = os.path.join(seq_output_dir, "relaxed_1000_model.pdb")
