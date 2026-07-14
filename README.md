@@ -99,35 +99,6 @@ We provide the training scripts that you can train the model yourself.
 python train_model.py --dataset Robin --split_method random --model_output_path Model/
 ```
 
-### CheckPoints
-Download the model weights and put into the "Model" folder, which contains the model checkpoint. You can direct run the scripts in ./Model folder to ger the model weights.
-
-```bash
-bash Model/get_weights.sh
-```
-
-
-### RNA Small Molecule Screening
-You can use our model to screening small molecules which can binding target RNA.
-```bash
-python inference_affinity.py
-```
-
-
-<!-- First, you need to offer the .pdb file which include RNA pdb file and . -->
-### RNA Target Binding Site Prediction
-Otherwise, you can also use our model to get RNA target binding sites prediction.
-You can run the file below, so that you can get the RNA_binding.csv about RNA.
-
-```bash
-python inference_binding_site.py
-```
-
-## License
-No Commercial use of either the model nor generated data, details to be found in license.md.
-
-``` -->
-
 ## Acknowledgements
 
 Our work builds upon [EquiFormer](https://github.com/atomicarchitects/equiformer), [Evidential Deep Learning](https://github.com/aamini/evidential-deep-learning), [MONN](https://github.com/lishuya17/MONN), [RNA-FM](https://github.com/ml4bio/RNA-FM), [RhoFold](https://github.com/ml4bio/RhoFold), and [TankBind](https://github.com/luwei0917/TankBind). Thanks for their excellent work and open-source contributions.
